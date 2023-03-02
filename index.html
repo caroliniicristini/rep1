@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leticia :)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+<body>
+<div class="containerMenu">
+  <div class="row">
+    <div class="col-3">
+      <div class="wrapperLogo">
+          <img class="logo" src="https://demos.codezeel.com/wordpress/WP02/WP029/wp-content/uploads/2022/11/Logo.svg" alt="logo">
+      </div>
+    </div>
+    <div class="col-9">
+      <nav id="navbar">        
+          <ul  class="nav-links">      
+              <input type="checkbox" id="checkbox_toggle"/>
+              <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+              <div class="menu">
+                  <li><a href="https://satellasoft.com"> Home </a></li>
+                  <li><a href="https://academy.satellasoft.com">Sobre</a></li>       
+                  <li><a href="#">Quem Somos</a></li>         
+                  <li><a href="#">Contato</a></li>
+                  <li><a href="#">Entrar</a></li>
+              </div>         
+          </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="conteudoSlider">
+    <p>Best of Photography</p>
+    <h3> Hipster Tourist Girl Take Photos</h3>
+    <button type="button">View Our Works</button>
+  </div>
+  <div id="dvSlider" onmouseover="parar()" onmouseout="iniciaSlider()">
+  <div class="buttonSlider">
+			<input type="button" value="0" id="bt" onclick="troca(-1)">
+			<input type="button" value="0" id="bt" onclick="troca(1)">
+  </div>
+</div>
+</div>
+
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
