@@ -8,16 +8,23 @@ body {
     width: 200px;
 }
 #navbar ul{
+    z-index: 2;
     display: flex;
     justify-content: end;
     list-style: none;
     margin: 0;
     color: white;
+    position: relative;
 }
 #navbar a{
     text-decoration: none;
     color: white;
     font-size: 14px;
+    font-weight: normal;
+}
+#navbar a:hover{
+    color: #e66a03;
+    font-weight: bold;
 }
 .containerMenu{
    
@@ -31,6 +38,8 @@ body {
     align-items: center;
     display: flex;
     justify-content: center;
+    z-index: 2;
+    position: relative;
 }
 .navbar {
     display: flex;
@@ -57,14 +66,14 @@ body {
 }
 input[type=checkbox]{
     display: none;
-} 
-/*HAMBURGER MENU*/
+
+}
 .hamburger {
     display: none;
     font-size: 24px;
     user-select: none;
 }
-/* APLICAÇÃO MEDIA QUERIES */
+
 @media (max-width: 768px) {
 .menu { 
     display:none;
@@ -91,14 +100,13 @@ input[type=checkbox]:checked ~ .menu{
 .hamburger {
     display: block;
 }
-
 }
 #dvslider{
     width: 1000px;
 }
 div#dvSlider {
     
-    height: 650px;
+    height: 600px;
 }
 .buttonSlider{
     display: flex;
@@ -107,6 +115,19 @@ div#dvSlider {
     height: 100%;
     padding: 20px;
     margin-top: -70px;
+    position: relative;
+}
+.buttonSlider:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: .6;
+    background: #000;
+    background: linear-gradient(180deg, #000 0%, rgba(0,0,0,0.9) 100%);
 }
 input#bt {
     background: #e66a03;
@@ -115,11 +136,13 @@ input#bt {
     color: white;
     height: 30px;
     width: 30px;
+    z-index: 2;
 }
 .conteudoSlider{
     position: absolute;
     left: 18%;
     top: 40%;
+    z-index: 2;
 }
 .conteudoSlider p{
     color: #e66a03;
@@ -141,3 +164,152 @@ input#bt {
     color: white;
 }
 
+.portfolios,
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+
+}
+.card h5,
+.card p,
+.titlePortfolios h1,
+.titlePortfolios h4,
+#navbar li a,
+.conteudoSlider p, 
+.conteudoSlider h3,
+.conteudoSlider button,
+.footer h1,
+.footer p
+ {
+    font-family: 'Playfair Display';
+}
+.titlePortfolios,
+.titleServices{
+    display: block;
+    text-align: center;
+    padding: 40px;
+    margin-top: 20px;
+}
+.titlePortfolios h4,
+.titleServices h4{
+    color: #e66a03;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.titlePortfolios h4,
+.titlePortfolios h1{
+    font-weight: bold;
+}
+@media(max-width: 1200px){
+    .portfolios,
+    .cards,
+    .containerCollapse .row{
+        display: block;
+    }
+    .card,
+    .cards,
+    .containerCollapse.row{
+        width: 70% !important;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+}
+.containerServices{
+    background:  #f5f5f5;
+    margin-bottom: 100px;
+}
+img.card-img-top.imgServices{
+    width: 90px;
+    margin: auto;
+    padding: 32px 0 16px 0;
+}
+.cards .card-body{
+    text-align: center;
+}
+.card-body p{
+    color: gray;
+}
+details summary {
+     list-style: none;
+    }
+
+  .collapse {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #e0dfdf;
+    max-width: 500px;
+    transition: background-color 0.25s;
+    will-change: background-color;
+  }
+  
+  .title {
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+    padding: 20px;
+  }
+  
+  .description {
+    border-top: #e0dfdf solid 1px;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 20px;
+    color: gray;
+  }
+  .collapse:not(.show) {
+    display: block !important;
+}
+
+.imgNature{
+    width: 520px;
+    margin-bottom: 20px;
+}
+@media (min-width: 1200px){
+    .containerCollapse.col-md-6 {
+        flex: 0 0 auto;
+        width: 100% !important;
+    }
+}
+.wrapperCollapse{
+    display: flex;
+}
+img.card-img-top:hover {
+    transform: scale(1.05);
+}
+.email:hoveR{
+    color: #e66a03;
+}
+#colophon{
+    height: 100%;
+}
+.footer {
+    background-image: url(https://demos.codezeel.com/wordpress/WP02/WP029/wp-content/uploads/2022/11/footer-img.jpg);
+    background-position: 52% 58%;
+    padding: 10px;
+    color: white;
+    height: 100%;
+}
+.footer ul{
+    list-style: none;
+}
+.footer h1{
+    color: #e66a03;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+.footer ul li, .footer p{
+    color: gray;
+    margin: 0;
+}
+.wrapperLogo{
+    height: 25px !important;
+}
+.wrapperLogoFooter{
+    width: 160px;
+    margin-bottom: 28px;
+}
+.card{
+    overflow: hidden;
+}

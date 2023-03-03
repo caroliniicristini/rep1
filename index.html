@@ -1,55 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leticia :)</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  </head>
-<body>
-<div class="containerMenu">
-  <div class="row">
-    <div class="col-3">
-      <div class="wrapperLogo">
-          <img class="logo" src="https://demos.codezeel.com/wordpress/WP02/WP029/wp-content/uploads/2022/11/Logo.svg" alt="logo">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Leticia :)</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   </head>
+   <body>
+      <div class="containerMenu">
+         <div class="row w-100">
+            <div class="col-3">
+               <div class="wrapperLogo">
+                  <img class="logo" src="https://demos.codezeel.com/wordpress/WP02/WP029/wp-content/uploads/2022/11/Logo.svg" alt="logo">
+               </div>
+            </div>
+            <div class="col-9">
+               <nav id="navbar">
+                  <ul  class="nav-links">
+                     <input type="checkbox" id="checkbox_toggle"/>
+                     <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                     <div class="menu">
+                        <li><a href="#"> Home </a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Quem Somos</a></li>
+                        <li><a href="#">Contato</a></li>
+                     </div>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+         <div class="conteudoSlider" data-aos="fade-right">
+            <p>Best of Photography</p>
+            <h3> Hipster Tourist Girl Take Photos</h3>
+            <button type="button">View Our Works</button>
+         </div>
       </div>
+      <div id="dvSlider" onmouseover="parar()" onmouseout="iniciaSlider()">
+         <div class="buttonSlider">
+            <input type="button" value="0" id="bt" onclick="troca(-1)">
+            <input type="button" value="0" id="bt" onclick="troca(1)">
+         </div>
+      </div>
+      <div class="containerPortfolios">
+         <div class="titlePortfolios" data-aos="zoom-out-down">
+            <h4>Portfolios</h4>
+            <h1>Our Photograhphs</h1>
+         </div>
+         <div class="portfolios">
+            <div class="card" style="width: 24rem;">
+               <img class="card-img-top" src="imgs/cat-img-01.jpg" alt="Card1">
+               <div class="card-body">
+                  <h5 class="card-title">Breathaking Snaps Of The Sea</h5>
+                  <p class="card-text">May 10, 2022 – May 30, 2022</p>
+               </div>
+            </div>
+            <div class="card" style="width: 24rem;">
+               <img class="card-img-top" src="imgs/cat-img-02.jpg" alt="Card2">
+               <div class="card-body">
+                  <h5 class="card-title">Yoho National Park Of Canada</h5>
+                  <p class="card-text">Jun 01, 2022 – Jun 21, 2022</p>
+               </div>
+            </div>
+            <div class="card" style="width: 24rem;">
+               <img class="card-img-top" src="imgs/cat-img-03.jpg" alt="Card3">
+               <div class="card-body">
+                  <h5 class="card-title">A Trip To Chobe National Park</h5>
+                  <p class="card-text">Oct 21, 2022 – Oct 30, 2022</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="containerServices">
+         <div class="titleServices" data-aos="zoom-out-down">
+            <h4>BEST SERVICES</h4>
+            <h1>Our Latest Works</h1>
+         </div>
+         <div class="cards">
+            <div class="card" style="width: 24rem;">
+               <img class="card-img-top imgServices" src="imgs/photography.png" alt="Card4">
+               <div class="card-body">
+                  <h5 class="card-title">Custom Photography</h5>
+                  <p class="card-text">There are many variations of Lorem Ipsum available majority suffer.</p>
+               </div>
+            </div>
+            <div class="card" style="width: 24rem;">
+               <img class="card-img-top imgServices" src="imgs/design-thinking.png" alt="Card5">
+               <div class="card-body">
+                  <h5 class="card-title">Creative Design</h5>
+                  <p class="card-text">It is a long established fact that a reader will be distracted</p>
+               </div>
+            </div>
+            <div class="card" style="width: 24rem;">
+               <img class="card-img-top imgServices" src="imgs/signature.png" alt="Card6">
+               <div class="card-body">
+                  <h5 class="card-title">Editing & Retouching</h5>
+                  <p class="card-text">There are many variations of Lorem Ipsum available majority</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="containerCollapse">
+         <div class="row wrapperCollapse">
+            <div class="col-sm-12 col-md-8 col-lg-6 m-auto ">
+               <img class="imgNature" src="imgs/Nature-06.jpg">
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-5 m-auto ">
+               <details class="collapse">
+                  <summary class="title">Am i allowed to modify the item that i purchased?</summary>
+                  <div class="description">You need to be sure there isn’t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend toitrrepeat. There are many variations of passages of Lorem Ipsum available Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</div>
+               </details>
+               <details class="collapse">
+                  <summary class="title">Nam tempor diam elit Lorem Dolor?</summary>
+                  <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</div>
+               </details>
+               <details class="collapse">
+                  <summary class="title">Am i allowed to modify the item that i purchased?</summary>
+                  <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</div>
+               </details>
+               <details class="collapse">
+                  <summary class="title">What Am i allowed to modify the item that i sell?</summary>
+                  <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</div>
+               </details>
+            </div>
+         </div>
+      </div>
+      <div class="containerPortfolios">
+         <div class="titlePortfolios" data-aos="zoom-out-down">
+            <h4>OUR TEAM</h4>
+            <h1>Expert Members</h1>
+         </div>
+         <div class="portfolios">
+            <div class="card" style="width: 24rem;">
+               <img class="card-img-top" src="imgs/team-1.jpg" alt="Card7">
+               <div class="card-body">
+                  <h5 class="card-title">Christopher Delik</h5>
+                  <p class="card-text">Wildlife Photographer</p>
+               </div>
+            </div>
+            <div class="card" style="width: 24rem;">
+               <img class="card-img-top" src="imgs/team-2.jpg" alt="Card8">
+               <div class="card-body">
+                  <h5 class="card-title">Angel Casondra</h5>
+                  <p class="card-text">Fashion Photographer</p>
+               </div>
+            </div>
+            <div class="card" style="width: 24rem;">
+               <img class="card-img-top" src="imgs/team-3.jpg" alt="Card9">
+               <div class="card-body">
+                  <h5 class="card-title">Raghava Lawrence</h5>
+                  <p class="card-text">Wedding Photographer</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+
+ <div class="content" id="colophon">
+   <div class="row footer">
+      <div class="col-md-4 col-sm-6">
+            <div class="wrapperLogoFooter">
+               <img class="logoFooter" src="https://demos.codezeel.com/wordpress/WP02/WP029/wp-content/uploads/2022/11/Logo.svg" alt="logo">
+            </div>
+            <p>
+               Photopic Photography 32 Quincy
+               Street Cambridge, MA
+            </p><br>
+            <p>(617) 495-9400</p>
+            <p class="email">demo@example.com</p>
+   
+      </div>
+      <div class="col-md-2 col-sm-6">
+         <h1>Open Hours</h1>
+        <p>Daily: 9.00 AM–6.00 PM</p><br>
+        <p>Sunday & Holidays: Closed</p>
+      </div>
+      <div class="col-md-3 col-sm-6">
+         <h1>Static Link</h1>
+         <ul>
+            <li>Help Center</li>
+            <li>Redeem Voucher</li>
+            <li>Contact Us</li>
+            <li>Report Abuse</li>
+            <li>Submit a Dispute</li>
+         </ul>
+      </div>
+      <div class="col-md-3 col-sm-6">
+         <h1>Information</h1>
+         <ul>
+            <li>Product Support</li>
+            <li>Checkout</li>
+            <li>License Policy</li>
+            <li>Affiliate</li>
+            <li>Locality</li>
+         </ul>
+      </div>
+      <i class="fa-solid fa-arrow-right"></i>
     </div>
-    <div class="col-9">
-      <nav id="navbar">        
-          <ul  class="nav-links">      
-              <input type="checkbox" id="checkbox_toggle"/>
-              <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-              <div class="menu">
-                  <li><a href="https://satellasoft.com"> Home </a></li>
-                  <li><a href="https://academy.satellasoft.com">Sobre</a></li>       
-                  <li><a href="#">Quem Somos</a></li>         
-                  <li><a href="#">Contato</a></li>
-                  <li><a href="#">Entrar</a></li>
-              </div>         
-          </ul>
-      </nav>
-    </div>
-  </div>
-  <div class="conteudoSlider">
-    <p>Best of Photography</p>
-    <h3> Hipster Tourist Girl Take Photos</h3>
-    <button type="button">View Our Works</button>
-  </div>
-  <div id="dvSlider" onmouseover="parar()" onmouseout="iniciaSlider()">
-  <div class="buttonSlider">
-			<input type="button" value="0" id="bt" onclick="troca(-1)">
-			<input type="button" value="0" id="bt" onclick="troca(1)">
-  </div>
-</div>
-</div>
+ </div>
 
-
-    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script type="text/javascript" src="main.js"></script>
-
-</body>
+ 
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="main.js"></script>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+         AOS.init();
+      </script>
+   </body>
 </html>
